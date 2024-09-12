@@ -1,2 +1,2 @@
-# EducationalRepository
-Completed assignments within the framework of the basic intership
+# Tasks for basic internship
+Completed assignments within the framework of the basic internship
