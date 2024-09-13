@@ -1,3 +1,6 @@
+from typing import Any
+
+
 class Dessert:
     
     def __init__(self, name: str | None = None, calories: float | None = None):
