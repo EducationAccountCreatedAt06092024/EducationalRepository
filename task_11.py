@@ -22,8 +22,8 @@ class Dessert:
     def calories(self) -> float | None:
         return self.calories
 
-    @name.setter
-    def name(self, value: Any) -> None:
+    @calories.setter
+    def calories(self, value: Any) -> None:
         if isinstance(value, int):
             self._calories = float(value)
         elif isinstance(value, float) or value is None:
