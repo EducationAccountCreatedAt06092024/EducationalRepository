@@ -1,7 +1,7 @@
 from typing import Any
 
 
-def sort_list(lst: list[int]) -> None:
+def sort_list(lst: list[int]) -> list[int]:
     min_elem, max_elem = None, None
     for e in lst:
         if min_elem is None or e < min_elem:
@@ -10,7 +10,7 @@ def sort_list(lst: list[int]) -> None:
             max_elem = e
 
     if min_elem is None or max_elem is None:
-        return
+        return lst
 
     if min_elem != max_elem:
         for i, e in enumerate(lst):
@@ -20,7 +20,7 @@ def sort_list(lst: list[int]) -> None:
                 lst[i] = min_elem
 
     lst.append(min_elem)
-    return
+    return lst
 
 
 def sort_list_test():
