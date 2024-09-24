@@ -13,10 +13,7 @@ class Dessert:
 
     @name.setter
     def name(self, value: Any) -> None:
-        if isinstance(value, str) or value is None:
-            self._name = value
-        else:
-            raise ValueError("name must be str | None")
+        self._name = value
 
     @property
     def calories(self) -> float | None:
@@ -24,16 +21,11 @@ class Dessert:
 
     @calories.setter
     def calories(self, value: Any) -> None:
-        if isinstance(value, int):
-            self._calories = float(value)
-        elif isinstance(value, float) or value is None:
-            self._calories = value
-        else:
-            raise ValueError("calories must be int | float | None")
+        self._calories = value
 
     @property
     def is_healthy(self) -> bool:
-        return self._calories is not None and self._calories < 200
+        return isinstance(self._calories, (int, float)) and self._calories < 200
 
     @property
     def is_delicious(self) -> bool:
